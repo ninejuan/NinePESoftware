@@ -75,9 +75,5 @@ namespace NinePEU
                 MessageBox.Show("아니요 클릭");
             }
         }
-        public void win11pro()
-        {
-
-        }
     }
 }
