@@ -68,6 +68,7 @@ namespace NinePEU
             string venvalue = Version.SelectedItem.ToString();
             if (MessageBox.Show($"You Selected {venvalue}.\n당신은 {venvalue}를 선택하셨습니다.\n\nDo you Want to Proceed? 진행하시겠습니까?", "NinePEU - 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                MessageBox.Show("It could be take few minutes.\n이 작업은 시간이 소요되는 작업입니다.", "Time Alert");
                 MessageBox.Show(venvalue);
             }
             else

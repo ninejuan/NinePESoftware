@@ -41,8 +41,16 @@ namespace NinePEU
         {
             if (IsUserAdministrator())
             {
-                WinActivation Winactive = new WinActivation();
-                Winactive.ShowDialog();
+                if (MessageBox.Show("You need to turn off the vaccination Program.\n이 기능을 실행하기 전 백신 프로그램을 반드시 꺼주세요. 바이러스로 오진할 수 있어요", "NinePEU - 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    WinActivation Winactive = new WinActivation();
+                    Winactive.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("종료되었습니다.");
+                    Environment.Exit(0);
+                }
             }
             else
             {
